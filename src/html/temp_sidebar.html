@@ -1,0 +1,170 @@
+<!-- Sidebar Start -->
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div>
+    <div class="brand-logo d-flex align-items-center justify-content-between">
+      <a href="./" class="text-nowrap logo-img">
+        <img src="{{ url_for('static', filename='images/logos/AQBsNestlogo.svg')}}" alt="" width="150" height="100" />
+      </a>
+      <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+        <i class="ti ti-x fs-8"></i>
+      </div>
+    </div>
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+      <ul id="sidebarnav">
+        
+        <!-- Home -->
+        <li class="nav-small-cap">
+          <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
+          <span class="hide-menu">Home</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Dashboard</span>
+          </a>
+        </li>
+
+        <!-- Tools -->
+        <li class="nav-small-cap">
+          <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
+          <span class="hide-menu">Tools</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./kpdcl-bill-reader" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:file-text-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">KPDCL Bill Reader</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./hsd-statement-generator" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:document-text-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">HSD Statement Generator</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./oorja-docket-closer" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:folder-open-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Oorja Docket Closer</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./oorja-bill-filler" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:clipboard-text-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Oorja Bill Filler</span>
+          </a>
+        </li>
+
+        <!-- Education -->
+        <li class="nav-small-cap">
+          <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
+          <span class="hide-menu">Education</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./jto-training" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:graduate-hat-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">JTO Training</span>
+          </a>
+        </li>
+
+        <!-- Islamic -->
+        <li class="nav-small-cap">
+          <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
+          <span class="hide-menu">Islamic</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./quran" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:book-open-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Quran</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./hadith" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:scroll-text-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Hadith</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./fiqh" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:scales-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Fiqh</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./arabic" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:alphabet-square-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Arabic</span>
+          </a>
+        </li>
+
+        <!-- Authentication -->
+        <li class="nav-small-cap">
+          <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-6"></iconify-icon>
+          <span class="hide-menu">Authentication</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:login-3-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Login</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:user-plus-rounded-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Register</span>
+          </a>
+        </li>
+
+        <!-- Extras -->
+        <li class="nav-small-cap">
+          <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-6"></iconify-icon>
+          <span class="hide-menu">Extras</span>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:sticker-smile-circle-2-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Icons</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+            <span>
+              <iconify-icon icon="solar:planet-3-bold-duotone" class="fs-6"></iconify-icon>
+            </span>
+            <span class="hide-menu">Sample Page</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
+<!--  Sidebar End -->
