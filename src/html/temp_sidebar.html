@@ -3,7 +3,7 @@
   <!-- Sidebar scroll-->
   <div>
     <div class="brand-logo d-flex align-items-center justify-content-between">
-      <a href="./" class="text-nowrap logo-img">
+      <a href="{{ url_for('web.homepage') }}" class="text-nowrap logo-img">
         <img src="{{ url_for('static', filename='images/logos/AQBsNestlogo.svg')}}" alt="" width="150" height="100" />
       </a>
       <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -20,7 +20,7 @@
           <span class="hide-menu">Home</span>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="./" aria-expanded="false">
+          <a class="sidebar-link" href="{{ url_for('web.homepage') }}" aria-expanded="false">
             <span>
               <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
             </span>
@@ -33,38 +33,26 @@
           <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
           <span class="hide-menu">Tools</span>
         </li>
+		
+		
+
+		{% set islamic_categories = [
+			{"title": "Quran", "slug": "quran"},
+			{"title": "Hadith", "slug": "hadith"},
+			{"title": "Fiqh", "slug": "fiqh"},
+			{"title": "Arabic", "slug": "arabic"}
+		] %}
+		
+        {% for tool in predefined_tool_list %}
         <li class="sidebar-item">
-          <a class="sidebar-link" href="./kpdcl-bill-reader" aria-expanded="false">
+          <a class="sidebar-link" href="{{ url_for('web.render_tool_details', tool_slug=tool.slug) }}" aria-expanded="false">
             <span>
               <iconify-icon icon="solar:file-text-bold-duotone" class="fs-6"></iconify-icon>
             </span>
-            <span class="hide-menu">KPDCL Bill Reader</span>
+            <span class="hide-menu">{{ tool.name }}</span>
           </a>
         </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./hsd-statement-generator" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:document-text-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">HSD Statement Generator</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./oorja-docket-closer" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:folder-open-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">Oorja Docket Closer</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./oorja-bill-filler" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:clipboard-text-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">Oorja Bill Filler</span>
-          </a>
-        </li>
+        {% endfor %}
 
         <!-- Education -->
         <li class="nav-small-cap">
@@ -85,38 +73,16 @@
           <i class="ti ti-dots nav-small-cap-icon fs-6"></i>
           <span class="hide-menu">Islamic</span>
         </li>
+        {% for category in islamic_categories %}
         <li class="sidebar-item">
-          <a class="sidebar-link" href="./quran" aria-expanded="false">
+          <a class="sidebar-link" href="{{ url_for('web.render_islamic_category_page', category_slug=category.slug) }}" aria-expanded="false">
             <span>
               <iconify-icon icon="solar:book-open-bold-duotone" class="fs-6"></iconify-icon>
             </span>
-            <span class="hide-menu">Quran</span>
+            <span class="hide-menu">{{ category.title }}</span>
           </a>
         </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./hadith" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:scroll-text-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">Hadith</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./fiqh" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:scales-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">Fiqh</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="./arabic" aria-expanded="false">
-            <span>
-              <iconify-icon icon="solar:alphabet-square-bold-duotone" class="fs-6"></iconify-icon>
-            </span>
-            <span class="hide-menu">Arabic</span>
-          </a>
-        </li>
+        {% endfor %}
 
         <!-- Authentication -->
         <li class="nav-small-cap">
@@ -167,4 +133,4 @@
   </div>
   <!-- End Sidebar scroll-->
 </aside>
-<!--  Sidebar End -->
+<!-- Sidebar End -->

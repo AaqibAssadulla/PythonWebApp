@@ -7,10 +7,10 @@ $(function () {
     series: [
       {
         name: "New Users",
-        data: [5, 1, 17, 6, 15, 9, 6],
+        data: [8, 1, 17, 6, 15, 9, 6],
       },
       {
-        name: "Users",
+        name: "Old Users",
         data: [7, 11, 4, 16, 10, 14, 10],
       },
     ],
